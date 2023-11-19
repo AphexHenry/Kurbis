@@ -17,9 +17,9 @@
 		9C4769372B0A55270093A03F /* simpleble in Resources */ = {isa = PBXBuildFile; fileRef = 9C4769362B0A55270093A03F /* simpleble */; };
 		9C4769392B0A59240093A03F /* BluetoothConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4769382B0A59240093A03F /* BluetoothConnector.swift */; };
 		9C47693D2B0A5B1A0093A03F /* SimplebleWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9C47693B2B0A5B1A0093A03F /* SimplebleWrapper.mm */; };
-		9C47693F2B0A61EA0093A03F /* libsimpleble.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C47693E2B0A61EA0093A03F /* libsimpleble.a */; };
 		9C4769442B0A66540093A03F /* utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9C4769432B0A66540093A03F /* utils.mm */; };
 		9C4769472B0A676D0093A03F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4769462B0A676D0093A03F /* CoreBluetooth.framework */; };
+		9CC2EBE42B0AB28100270E52 /* libYourLibrary_universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC2EBE32B0AB28100270E52 /* libYourLibrary_universal.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +56,11 @@
 		9C47693A2B0A5B1A0093A03F /* Kurbis-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Kurbis-Bridging-Header.h"; sourceTree = "<group>"; };
 		9C47693B2B0A5B1A0093A03F /* SimplebleWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SimplebleWrapper.mm; sourceTree = "<group>"; };
 		9C47693C2B0A5B1A0093A03F /* SimplebleWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimplebleWrapper.h; sourceTree = "<group>"; };
-		9C47693E2B0A61EA0093A03F /* libsimpleble.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsimpleble.a; path = libs_compiled/libsimpleble.a; sourceTree = "<group>"; };
 		9C4769422B0A66540093A03F /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utils.h; path = common/utils.h; sourceTree = "<group>"; };
 		9C4769432B0A66540093A03F /* utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = utils.mm; path = common/utils.mm; sourceTree = "<group>"; };
 		9C4769462B0A676D0093A03F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
 		9C4769482B0A74810093A03F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9CC2EBE32B0AB28100270E52 /* libYourLibrary_universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libYourLibrary_universal.a; path = libs_compiled/libYourLibrary_universal.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC2EBE42B0AB28100270E52 /* libYourLibrary_universal.a in Frameworks */,
 				9C4769472B0A676D0093A03F /* CoreBluetooth.framework in Frameworks */,
-				9C47693F2B0A61EA0093A03F /* libsimpleble.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +93,7 @@
 		9C4768FB2B0A490E0093A03F = {
 			isa = PBXGroup;
 			children = (
-				9C47693E2B0A61EA0093A03F /* libsimpleble.a */,
+				9CC2EBE32B0AB28100270E52 /* libYourLibrary_universal.a */,
 				9C4769362B0A55270093A03F /* simpleble */,
 				9C4769062B0A490E0093A03F /* Kurbis */,
 				9C4769182B0A49100093A03F /* KurbisTests */,
@@ -482,6 +482,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/libs_compiled",
+					"$(PROJECT_DIR)/libs/SimpleBLE/simpleble",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.2;
 				MARKETING_VERSION = 1.0;
@@ -532,6 +533,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/libs_compiled",
+					"$(PROJECT_DIR)/libs/SimpleBLE/simpleble",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.2;
 				MARKETING_VERSION = 1.0;
