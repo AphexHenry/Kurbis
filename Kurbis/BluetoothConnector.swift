@@ -16,7 +16,6 @@ class BluetoothConnector {
         self.property = property
         // SomeSwiftFile.swift
         objcObject = SimplebleClassWrapper()
-
     }
     
     /*

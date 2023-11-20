@@ -62,14 +62,27 @@ final class KurbisApp: App {
     
     func startRepeatingFunction() {
         // Schedule a timer to call `repeatedFunction` every 2 seconds
-        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(repeatedFunction), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(checkForNewValueFromBluetooth), userInfo: nil, repeats: true)
     }
 
-    @objc func repeatedFunction() {
-        print("Function is called repeatedly")
+    @objc func checkForNewValueFromBluetooth() {
         let newValue = myBlueTooh.getNewValue();
         print(newValue)
-        // Your repeated code here
+        if(newValue.contains("next")) {
+            let scriptSource = """
+        tell application "Music"
+            playpause
+        end tell
+        """
+            
+            if let script = NSAppleScript(source: scriptSource) {
+                var errorDict: NSDictionary? = nil
+                script.executeAndReturnError(&errorDict)
+                if let error = errorDict {
+                    print("AppleScript Error: \(error)")
+                }
+            }
+        }
     }
     
     func stopRepeatingFunction() {

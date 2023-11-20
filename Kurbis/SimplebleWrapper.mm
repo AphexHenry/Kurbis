@@ -53,11 +53,17 @@ std::pair<SimpleBLE::BluetoothUUID, SimpleBLE::BluetoothUUID> sUuids;
 
 -(NSString *) getNewValue {
     SimpleBLE::ByteArray rx_data = sPeripheral.read(sUuids.first, sUuids.second);
-    std::cout << "Characteristic content is: ";
-    Utils::print_byte_array(rx_data);
+//    std::cout << "Characteristic content is: ";
+//    Utils::print_byte_array(rx_data);
     std::string str(rx_data.begin(), rx_data.end());
     NSString *returnString = @(str.c_str());
-    return returnString;
+    if(lastValue != returnString) {
+        lastValue = returnString;
+        return returnString;
+    }
+    else {
+        return @"";
+    }
 }
 
 SimpleBLE::Peripheral getOurDriver() {

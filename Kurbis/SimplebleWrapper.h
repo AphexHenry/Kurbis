@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface SimplebleClassWrapper : NSObject
-    -(NSString *) getNewValue;
-@end
+{
+    NSString *lastValue; // Instance variable declaration
+}
 
+- (NSString *)getNewValue;
+
+@end
 
 
