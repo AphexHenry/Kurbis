@@ -9,12 +9,20 @@ import Foundation
 
 class BluetoothConnector {
     var property: String
+    let objcObject:SimplebleClassWrapper
 
     // Initialization method
     init(property: String) {
         self.property = property
         // SomeSwiftFile.swift
-        let objcObject = SimplebleClassWrapper()
+        objcObject = SimplebleClassWrapper()
 
+    }
+    
+    /*
+     * will return a new value received from the connected device if available.
+     */
+    func getNewValue() -> String {
+        return objcObject.getNewValue();
     }
 }

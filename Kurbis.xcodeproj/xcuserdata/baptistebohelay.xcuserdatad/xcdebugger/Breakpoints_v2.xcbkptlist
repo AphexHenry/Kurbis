@@ -14,8 +14,8 @@
             filePath = "Kurbis/KurbisApp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "init()"
             landmarkType = "7">
             <Locations>
@@ -62,8 +62,8 @@
             filePath = "Kurbis/SimplebleWrapper.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "-init"
             landmarkType = "7">
             <Locations>
@@ -110,8 +110,8 @@
             filePath = "Kurbis/BluetoothConnector.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "init(property:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -119,97 +119,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "518475FA-CE43-481C-B38D-EE2C4E58E008"
+            uuid = "868FD784-0A28-4C5E-A4C9-4059DDE0B5AC"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Kurbis/SimplebleWrapper.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "-init"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "518475FA-CE43-481C-B38D-EE2C4E58E008 - e59136c0c7048f92"
+                  uuid = "868FD784-0A28-4C5E-A4C9-4059DDE0B5AC - 940f6a60885cee8d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[SimplebleClassWrapper init]"
                   moduleName = "Kurbis"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/baptistebohelay/Dev/Kurbis/Kurbis/Kurbis/SimplebleWrapper.mm"
+                  urlString = "file:///Users/baptistebohelay/Dev/Kurbis/Kurbis%20Desktop%20Client/Kurbis/SimplebleWrapper.mm"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "140">
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "80">
                </Location>
                <Location
-                  uuid = "518475FA-CE43-481C-B38D-EE2C4E58E008 - e59136c0c7048f92"
+                  uuid = "868FD784-0A28-4C5E-A4C9-4059DDE0B5AC - 940f6a60885ceeee"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[SimplebleClassWrapper init]"
                   moduleName = "Kurbis"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/baptistebohelay/Dev/Kurbis/Kurbis/Kurbis/SimplebleWrapper.mm"
+                  urlString = "file:///Users/baptistebohelay/Dev/Kurbis/Kurbis%20Desktop%20Client/Kurbis/SimplebleWrapper.mm"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "172">
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "68">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7228D90C-C62A-45D9-8767-A8E21D303307"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Kurbis/SimplebleWrapper.mm"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "-init"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1EC67935-0B05-4B3A-8FEE-7DD650D447D3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Kurbis/SimplebleWrapper.mm"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "-init"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "36E18D09-D37E-49C8-A7BD-F69D8EBCED84"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Kurbis/SimplebleWrapper.mm"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "-init"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

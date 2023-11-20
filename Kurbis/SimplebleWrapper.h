@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface SimplebleClassWrapper : NSObject
-
+    -(NSString *) getNewValue;
 @end
 
 

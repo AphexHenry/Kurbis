@@ -9,9 +9,6 @@
 		<key>com.apple.Music</key>
 		<array>
 			<string>com.apple.music.playback</string>
-			<string>com.apple.Music.library.playback</string>
-			<string>com.apple.Music.user-interface</string>
-			<string>com.apple.music.library.read</string>
 		</array>
 	</dict>
 </dict>
