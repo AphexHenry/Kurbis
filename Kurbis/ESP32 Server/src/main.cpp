@@ -12,6 +12,9 @@ int howManyInARow = 0;
 int readValueFiltered = 0;
 
 int timeElaspedSinceAd = 0;
+int timeElaspedSinceSendValue = 0;
+int readValueToSend = 0;
+int readValueCount = 0;
 int actionCounter = 0;
 
 #define SERVICE_UUID        "4fafc201-1fb5-459e-8fcc-c5c9c331914b"
@@ -27,6 +30,8 @@ class MyCallbacks: public BLECharacteristicCallbacks {
 
         Serial.print("Received Value: ");
         Serial.println(value.c_str());
+
+
 
         // Optionally, process the value or update internal state here
         // This is where you'd react to the new value sent from the desktop app
@@ -75,12 +80,26 @@ void loop() {
   delay(lFastRefreshMs);
 
   timeElaspedSinceAd += lFastRefreshMs;
-  if(timeElaspedSinceAd > 2000) {
+  timeElaspedSinceSendValue += lFastRefreshMs;
+  if (timeElaspedSinceAd > 2000)
+  {
     BLEDevice::startAdvertising();
     timeElaspedSinceAd = 0;
   }
 
+  if(timeElaspedSinceSendValue > 50) {
+    String stringToSend = String("v") + (int)((float)readValueToSend / (float)readValueCount);
+    pCharacteristic->setValue(stringToSend.c_str());
+    Serial.println(stringToSend);
+    readValueToSend = 0;
+    readValueCount = 0;
+    timeElaspedSinceSendValue = 0;
+  }
+
   readValue = analogRead(pinReading);
+  readValueToSend += readValue;
+  readValueCount++;
+
   readValueFiltered = readValueFiltered * 0.9 + readValue * 0.1;
   if (readValueFiltered > 100)
   {
@@ -99,10 +118,9 @@ void loop() {
       actionCounter++;
       actionCounter = actionCounter % 10;
       pCharacteristic->setValue(stringToSend.c_str());
-        delay(1000);
       Serial.println("hello from the loop");
       digitalWrite(LED_BUILTIN, HIGH);
-      delay(1000);
+      delay(100);
       digitalWrite(LED_BUILTIN, LOW);
     }
     howManyInARow = 0;

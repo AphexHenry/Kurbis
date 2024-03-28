@@ -36,6 +36,13 @@ struct KurbisApp: App {
                     }
                 }
             }
+            else if newValue.first == "v" {
+                // Convert the SubSequence to String, then attempt to convert to Double
+                if let volumeValue = Double(newValue.dropFirst()) {
+                    let volume = volumeValue / 300.0 // volume is already a Double, direct calculation
+                    CalibrationManager.shared.updateMicrophoneSignalLevel(newLevel: volume)
+                }
+            }
         }
     }
     

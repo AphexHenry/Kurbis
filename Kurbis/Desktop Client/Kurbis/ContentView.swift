@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    // Observe changes in CalibrationManager
-    @StateObject private var calibrationManager = CalibrationManager()
-    
+    @StateObject private var calibrationManager = CalibrationManager.shared
+
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -27,10 +26,19 @@ struct ContentView: View {
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .padding()
                     .foregroundColor(.white)
-                    .background(calibrationManager.isCalibrating ? Color.gray : Color.blue) // Change button color based on calibration state
+                    .background(calibrationManager.isCalibrating ? Color.gray : Color.blue)
                     .cornerRadius(40)
             }
-            .disabled(calibrationManager.isCalibrating) // Disable button during calibration
+            .disabled(calibrationManager.isCalibrating)
+            .padding()
+            
+            // Level Meter UI
+            VStack {
+                Text("Microphone Level")
+                ProgressView(value: calibrationManager.microphoneSignalLevel)
+                    .progressViewStyle(LinearProgressViewStyle(tint: .green))
+                    .scaleEffect(x: 1, y: 2, anchor: .center) // Increase thickness of the progress bar
+            }
             .padding()
         }
         .padding()

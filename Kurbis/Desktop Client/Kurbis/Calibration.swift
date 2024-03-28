@@ -9,16 +9,24 @@ import Foundation
 
 class CalibrationManager: ObservableObject {
     
+    static let shared = CalibrationManager()
     var bluetoothConnector = BluetoothConnector.shared
     
     // Use @Published for properties that, when changed, should update the UI
     @Published var isCalibrating = false
+    @Published var microphoneSignalLevel: Double = 0.0 // Represents signal level, 0.0 to 1.0 for simplicity
+
+    // Your existing methods here...
+    func updateMicrophoneSignalLevel(newLevel: Double) {
+        self.microphoneSignalLevel = newLevel
+        // Additional logic to handle the new level
+    }
     
     func startCalibration() {
         // Start the calibration process
         isCalibrating = true
         
-        bluetoothConnector.sendMessage("calibration started");
+        bluetoothConnector.sendMessage("calistart");
         
         // Example calibration process
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
